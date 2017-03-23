@@ -28,19 +28,22 @@
            android:id="@+id/toolbar_normal"
            android:layout_width="200dip"
            android:layout_height="wrap_content"
-           android:text="@string/normal_toolbar"/>
+           android:text="@string/normal_toolbar"
+           android:background="?selectableItemBackground"/>
 
         <Button
             android:id="@+id/toolbar_image"
             android:layout_width="200dip"
             android:layout_height="wrap_content"
-            android:text="@string/toolbar_image"/>
+            android:text="@string/toolbar_image"
+            android:background="?selectableItemBackground"/>
 
         <Button
             android:id="@+id/toolbar_tablayout"
             android:layout_width="200dip"
             android:layout_height="wrap_content"
-            android:text="@string/toolbar_tablayout"/>
+            android:text="@string/toolbar_tablayout"
+            android:background="?selectableItemBackground"/>
 
     </LinearLayout>
 

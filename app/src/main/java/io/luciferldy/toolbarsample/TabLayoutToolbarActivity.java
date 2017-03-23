@@ -17,7 +17,7 @@ import android.widget.TextView;
  * Created by Lucifer on 2017/3/23.
  */
 
-public class TabLayoutToolbarLayout extends AppCompatActivity {
+public class TabLayoutToolbarActivity extends AppCompatActivity {
 
     public static final String TITLE = "title";
 
@@ -28,26 +28,22 @@ public class TabLayoutToolbarLayout extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
+        SimpleFragmentAdapter adapter = new SimpleFragmentAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
-
-    class SimpleFragment extends Fragment{
-
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            TextView tv = new TextView(container.getContext());
-            container.addView(tv, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-            return tv;
-        }
-    }
-
-    class SimpleFragmentApdater extends FragmentPagerAdapter {
+    class SimpleFragmentAdapter extends FragmentPagerAdapter {
 
         String[] titles = {"ONE", "TWO", "THREE", "FOUR"};
 
-        public SimpleFragmentApdater(FragmentManager fm) {
+        public SimpleFragmentAdapter(FragmentManager fm) {
             super(fm);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return titles[position];
         }
 
         @Override
@@ -62,6 +58,11 @@ public class TabLayoutToolbarLayout extends AppCompatActivity {
         @Override
         public int getCount() {
             return titles.length;
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            super.destroyItem(container, position, object);
         }
     }
 
