@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.luciferldy.toolbarsample.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/app_name"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+       <Button
+           android:id="@+id/toolbar_normal"
+           android:layout_width="200dip"
+           android:layout_height="wrap_content"
+           android:text="@string/normal_toolbar"/>
+
+        <Button
+            android:id="@+id/toolbar_image"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="@string/toolbar_image"/>
+
+        <Button
+            android:id="@+id/toolbar_tablayout"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="@string/toolbar_tablayout"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
