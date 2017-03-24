@@ -28,8 +28,9 @@
            android:id="@+id/toolbar_normal"
            android:layout_width="200dip"
            android:layout_height="wrap_content"
+           android:layout_marginTop="50dip"
            android:text="@string/normal_toolbar"
-           android:background="?selectableItemBackground"/>
+           android:background="?selectableItemBackground" />
 
         <Button
             android:id="@+id/toolbar_image"
