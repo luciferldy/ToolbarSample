@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
+            android:layout_marginTop="16dip"
             android:layout_marginLeft="16dip"
             android:layout_marginRight="16dip"
             android:text="@string/mockingbird_lyric"/>
